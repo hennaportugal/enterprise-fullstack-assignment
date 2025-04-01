@@ -1,6 +1,6 @@
 # Database Documentation
 
-This document provides detailed information about the database schema and tables for the Chartmetric assignment.
+This document provides detailed information about the database schema and tables for the Chartmetric assignment. The sample dataset is totally made up so don't worry about the data quality.
 
 ## Connection Information
 
