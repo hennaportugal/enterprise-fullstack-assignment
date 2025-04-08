@@ -9,7 +9,8 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001';
  * @param {Object} options - Fetch options
  * @returns {Promise<any>} - Promise resolving to JSON response
  */
-export const fetchFromAPI = async (endpoint, options = {}) => {
+export const fetchFromAPI = async (endpoint: string, options: { headers?: Record<string, string>; body?: any; method?: string } = {}
+) => {
   try {
     const url = `${API_URL}/${endpoint}`;
     console.log(`Making API request to: ${url}`);
@@ -41,6 +42,15 @@ export const api = {
    * Sample API method to get data. You should replace this with your actual API methods.
    */
   getData: () => fetchFromAPI('api/data'),
+  getAllArtists: () => fetchFromAPI('api/artists'),
+  getArtistData: (artistId: string, countryCodes: string[], days: number) => {
+    const query = `countryCodes=${countryCodes.join(',')}&days=${days}`;
+    return fetchFromAPI(`api/artist/${artistId}?${query}`);
+  },
+  getArtistIdByName: (artistName: string) => {
+    return fetchFromAPI(`api/artist/id/${artistName}`);
+  },
+  
 };
 
 export default api;

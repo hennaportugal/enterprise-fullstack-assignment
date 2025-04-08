@@ -1,0 +1,38 @@
+.timeRangeToggle {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+  width: 100%;
+}
+
+.toggleButton {
+  flex-grow: 1;
+  min-width: 150px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  text-align: center;
+}
+
+.toggleButton:hover {
+  background-color: #e6e6e6;
+}
+
+.active {
+  background-color: rgba(163, 201, 255, 0.567);
+  color: #220d9a;
+}
