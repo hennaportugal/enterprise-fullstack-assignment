@@ -22,7 +22,7 @@ const FollowerConversionChart = ({
       color: "hsl(220, 70%, 50%)",
       data: data.map((item) => ({
         x: item.date || "Unknown Date",
-        y: item.followers_gains || "No Data",
+        y: item.followers_gains,
       })),
     },
     {
@@ -30,7 +30,7 @@ const FollowerConversionChart = ({
       color: "hsl(220, 70%, 50%)",
       data: data.map((item) => ({
         x: item.date || "Unknown Date",
-        y: item.streams || "No Data",
+        y: item.streams,
       })),
     },
   ];

@@ -22,7 +22,7 @@ const ListenerToStreamChart = ({
       color: "hsl(220, 70%, 50%)",
       data: data.map((item) => ({
         x: item.date || "Unknown Date",
-        y: item.streams || "No Data",
+        y: item.streams,
       })),
     },
     {
@@ -30,7 +30,7 @@ const ListenerToStreamChart = ({
       color: "hsl(120, 70%, 50%)",
       data: data.map((item) => ({
         x: item.date || "Unknown Date",
-        y: item.unique_listeners || "No Data",
+        y: item.unique_listeners,
       })),
     },
   ];
